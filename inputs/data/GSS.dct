@@ -1,0 +1,15 @@
+
+infile dictionary {
+
+_column(1) 	 numeric 		 BALLOT 		 %20f 		 "ballot used for interview" 
+_column(6) 	 numeric 		 WRKSTAT 		 %20f 		 "labor force status" 
+_column(10) 	 numeric 		 HRS1 		 %20f 		 "number of hours worked last week" 
+_column(15) 	 numeric 		 WRKGOVT 		 %20f 		 "govt or private employee" 
+_column(20) 	 numeric 		 COMMUTE 		 %20f 		 "travel time to work" 
+_column(25) 	 numeric 		 SPWRKSTA 		 %20f 		 "spouse labor force status" 
+_column(30) 	 numeric 		 SPHRS1 		 %20f 		 "number of hrs spouse worked last week" 
+_column(35) 	 numeric 		 SATJOB 		 %20f 		 "work satisfaction" 
+_column(40) 	 numeric 		 STRESS 		 %20f 		 "how often does r find work stressful" 
+_column(45) 	 numeric 		 YEAR 		 %20f 		 "GSS year for this respondent" 
+_column(50) 	 numeric 		 ID_ 		 %20f 		 "Respondent id number" 
+}
