@@ -10,7 +10,7 @@ format:
   pdf:
     documentclass: article
     geometry: margin = 1in
-    abstract: "This paper explores several potential explanatory factors for the steep decline in birth rates in the United States between 2007 and 2020. The decline in U.S. birthrates offers some significant insights into U.S. society. Changes in birth patterns among recent young adult women moving through the childbearing age group can be directly related to the decline in birth rate from a purely statistical standpoint. We provide evidence that the steep drop in birth rates could be attributed to recent young adults' shifting interests. These shifting priorities represent changes in young adults' preferences regarding having children and aspirations for life. Resonating with the original paper, we conclude with a brief discussion of the implications of the declining birth rate in the United States and its impact on society as an entirety."
+    abstract: "This paper discusses data from some survey, which can gather data that is linked to how people face work stress. This paper uses the original data from the survey which determines the relationships between respondent work stress levels by satisfaction, status, sectors, and work time. This paper will provide a strong analysis about the work stress that people are facing."
     toc: true
     number-sections: true
     colorlinks: true
