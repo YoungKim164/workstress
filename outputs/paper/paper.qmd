@@ -10,7 +10,7 @@ format:
   pdf:
     documentclass: article
     geometry: margin = 1in
-    abstract: "This paper discusses data from some survey, which can gather data that is linked to how people face work stress. This paper uses the original data from the survey which determines the relationships between respondent work stress levels by satisfaction, status, sectors, and work time. This paper will provide a strong analysis about the work stress that people are facing."
+    abstract: "This paper discusses data from some survey, which can gather data that is linked to how people face work stress. It uses uses the original data from the survey which determines the relationships between respondent work stress levels by satisfaction, status, sectors, and work time. There will be some strong connections between the analysis and figures of the work stress. This paper will provide a strong analysis about the work stress that people are facing."
     toc: true
     number-sections: true
     colorlinks: true
