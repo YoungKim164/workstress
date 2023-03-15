@@ -64,6 +64,7 @@ We have included mainly all datasets and variables that are very important for o
 
 ```{r setup}
 #| echo: false
+#| warning: false
 #| message: false
 #| label: fig-1
 #| fig-cap: Work Stress by Job Status
@@ -91,6 +92,7 @@ clean_data %>%
 
 ```{r}
 #| echo: false
+#| warning: false
 #| message: false
 #| label: fig-2
 #| fig-cap: Work Stress by Work Hours
@@ -125,6 +127,7 @@ clean_data %>%
 
 ```{r}
 #| echo: false
+#| warning: false
 #| label: fig-3
 #| fig-cap: Work Stress by Industry Sector
 raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
@@ -150,6 +153,7 @@ clean_data %>%
 
 ```{r}
 #| echo: false
+#| warning: false
 #| label: fig-4
 #| fig-cap: Work Stress by Job Satisfaction
 raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
