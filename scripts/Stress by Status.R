@@ -13,9 +13,9 @@ positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
 clean_data %>% 
   ggplot(aes(group = wrkstat)) +
   geom_bar(aes(x=stress, y = ..prop.., fill=factor(..x..)))+
-  labs(y = "Percent", fill="Work Stress", x = 'Work Stress', title = "Work Stress by Work status" ) +
+  labs(y = "Percent", fill="Work Stress", x = 'Work Stress', title = "Work Stress by status" ) +
   facet_wrap(~wrkstat) +
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
-  theme_minimal(base_size = 12) +
+  theme_minimal(base_size = 8) +
   theme(legend.position="none")

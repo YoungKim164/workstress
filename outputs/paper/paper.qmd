@@ -21,15 +21,9 @@ bibliography: references.bib
 
 ```{r setup, include = FALSE}
 #Load libraries
-library(gridExtra)
-library(cdlTools)
-library(RGraphics)
-library(tidyverse)
-library(palmerpenguins)
-library(knitr)
-library(ggplot2)
-library(haven)
 library(dplyr)
+library(tidyverse)
+library(readxl)
 options(dplyr.summarise.inform = FALSE)
 ```
 
@@ -64,10 +58,120 @@ Most of the data used in this paper were cleaned to get the most accurate inform
 
 We have included mainly all datasets and variables that are very important for our research question. We included variables by race, birth rates, age group, and other important factors. Lots of other variables were included, such as the total number of births and birth rates. Both of these allow us to analyze the decline of births over time. We did lots of modifications of the variables for this paper, which were mainly done within the age category. Generally, the original paper has an age category as one thing from age 15-44. For our figures, we made several figures and chose a specific age range. We have tried our best to divide the range into categories like 15-19, 20-24, 25-34, and 35-44 throughout most of the figures. We have also modified for race by having a figure that shows the data by different races, such as Black, White, and Hispanic people. Several figures had an important modifications to be relevant to our analysis throughout the paper.
 
+\newpage
+
 ## Data Visualization
 
-Most of the figures show lots of visualization of the data. We can easily expect that the birth rate is declining over time within the United States due to many other factors impacting people's decision to have more kids. When it comes to race, there are a lot of data showing some useful information to visualize. Overall, black people tend to have lower birth rates than Hispanic and white people. Hispanics have the highest birth rates, while people are the second highest. But all races are showing a down trendline that the birth rates are going down over time which can be coming from other factors. When it comes to factors like childcare expenses, it shows that people with lower expense tends to have low birth rates, while more expense tends to have more birth rates. When the rental housing costs are high, the number of birth rates tends to go down, and the same for the situation in student loan debt. When it comes to the figures of different races, we decided to focus on age groups such as 15-19 and 20-24 because we believe that this age category has more useful information since we know that in the past, people tended to have kids much earlier than before due to having marriage at an early age. The birth rates by different races in the age group 15-19 have drastically decreased over time when compared to the age group 20-24. This is because fewer people are getting married before age 20 and having kids before age 20.
+```{r setup}
+#| echo: false
+#| message: false
+#| label: fig-1
+#| fig-cap: Work Stress by Job Status
+#Load libraries
+raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
+clean_data <- raw_data %>% 
+  select(wrkstat, stress) %>% 
+  filter(str_detect(stress, "Always|Often|Sometimes|Hardly ever|Never"),
+         str_detect(wrkstat, "Working full time|Working part time"))
 
+positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
+
+clean_data %>% 
+  ggplot(aes(group = wrkstat)) +
+  geom_bar(aes(x=stress, y = ..prop.., fill=factor(..x..)))+
+  labs(y = "Percent", fill="Work Stress", x = 'Work Stress', title = "Work Stress by status" ) +
+  facet_wrap(~wrkstat) +
+  scale_x_discrete(limits = positions) +
+  scale_y_continuous(labels = scales::percent) +
+  theme_minimal(base_size = 8) +
+  theme(legend.position="none")
+```
+
+\newpage
+
+```{r}
+#| echo: false
+#| message: false
+#| label: fig-2
+#| fig-cap: Work Stress by Work Hours
+raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
+clean_data <- raw_data %>% 
+  select(hrs1, stress) %>% 
+  filter(!str_detect(hrs1, ".i|.y|.n|.d"), str_detect(stress, "Always|Often|Sometimes|Hardly ever|Never"))
+
+clean_data <- clean_data %>% 
+  mutate(range = case_when(
+    hrs1 < 20 ~ '< 20',
+    hrs1 >= 20 & hrs1 < 30 ~ '20-29',
+    hrs1 >= 30 & hrs1 < 40 ~ '30-39',
+    hrs1 >= 40 & hrs1 < 50 ~ '40-49',
+    hrs1 >= 50 & hrs1 < 60 ~ '50-59',
+    hrs1 >= 60 ~ '60 over'
+  ))
+
+positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
+
+clean_data %>% 
+  ggplot() +
+  geom_bar(aes(x = stress,  y = ..prop.., group = range, fill=factor(..x..))) +
+  scale_x_discrete(limits = positions) +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(~range) +
+  theme_minimal(base_size = 6) +
+  theme(legend.position="none")
+```
+
+\newpage
+
+```{r}
+#| echo: false
+#| label: fig-3
+#| fig-cap: Work Stress by Industry Sector
+raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
+clean_data <- raw_data %>% 
+  select(wrkgovt, stress) %>% 
+  filter(str_detect(wrkgovt, "Government|Private"),
+         str_detect(stress, "Always|Often|Sometimes|Hardly ever|Never"))
+
+
+positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
+
+clean_data %>% 
+  ggplot() +
+  geom_bar(aes(x = stress,  y = ..prop.., group = wrkgovt, fill=factor(..x..))) +
+  scale_x_discrete(limits = positions) +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(~wrkgovt) +
+  theme_minimal(base_size = 8) +
+  theme(legend.position="none")
+```
+
+\newpage
+
+```{r}
+#| echo: false
+#| label: fig-4
+#| fig-cap: Work Stress by Job Satisfaction
+raw_data <- read_excel(here::here("inputs/data/GSS.xlsx"))
+clean_data <- raw_data %>% 
+  select(satjob, stress) %>% 
+  filter(str_detect(satjob, "Very satisfied|Moderately satisfied|A little dissatisfied|Very dissatisfied"),
+         str_detect(stress, "Always|Often|Sometimes|Hardly ever|Never"))
+
+
+positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
+
+clean_data %>% 
+  ggplot() +
+  geom_bar(aes(x = stress,  y = ..prop.., group = satjob, fill=factor(..x..))) +
+  scale_x_discrete(limits = positions) +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(~satjob) +
+  theme_minimal(base_size = 6) +
+  theme(legend.position="none")
+```
+
+\newpage
 
 # Results {#sec-results}
 

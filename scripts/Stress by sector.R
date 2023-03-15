@@ -17,5 +17,5 @@ clean_data %>%
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
   facet_wrap(~wrkgovt) +
-  theme_minimal(base_size = 12) +
+  theme_minimal(base_size = 8) +
   theme(legend.position="none")
