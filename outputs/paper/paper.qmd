@@ -27,13 +27,17 @@ library(readxl)
 options(dplyr.summarise.inform = FALSE)
 ```
 
+
+\newpage
+
+
 # Introduction
 
-Work is the most common cause of many people to get stress. Work stress can be found in many forms for people. In this paper, we will examine job status, work hours, industry sector, satisfaction rate of your job into the correlation of work stress levels. There will be context that will motivate such as the data that is representing the factors of work stress and how people feel based on the real dataset. There are many analysis to talk about relevant to work stress, that can later conclude the next steps that workplace should consider to reduce work stress for many employees. All of the data are being collected through GSS, which allowed us to create different figures of job status, work hours, industry sector, and satisfaction rates. They were all written as code within the Quarto document. We saw some data that shows how the work stress occurs from the these factors. All of these information within the paper is very important because it will let the readers and others in the public to be aware of how people are facing work stress, and the analysis can provide some strong points that can lead everyone to know what employers and managers can do to avoid work stress for all employees working.
+Work is the most common cause of many people to get stress. Work stress can be found in many forms for people. In this paper, we will examine job status, work hours, industry sector, satisfaction rate of your job into the correlation of work stress levels. There will be context that will motivate such as the data that is representing the factors of work stress and how people feel based on the real dataset. There are many analysis to talk about relevant to work stress, that can later conclude the next steps that workplace should consider to reduce work stress for many employees. All of the data are being collected through the US General Social Survey [@norc] from NORC at the University of Chicago, which allowed us to create different figures of job status, work hours, industry sector, and satisfaction rates. They were all written as code within the Quarto document. We saw some data that shows how the work stress occurs from the these factors. All of these information within the paper is very important because it will let the readers and others in the public to be aware of how people are facing work stress, and the analysis can provide some strong points that can lead everyone to know what employers and managers can do to avoid work stress for all employees working.
 
-In this paper, we gathered data from (Publisher Name), (Data Name). With the gathered data, we generated figures to observe the trend in work stress of different categories using R [@citeR]. We also uploaded and cleaned data using R [@citeR], tidyr [@citetidyr], dplyr [@citedplyr], tidyverse [@citetidyverse], and haven [@citehaven] packages. Figures and tables were created with knitr [@citeknit], ggplot2 [@citeggplot], kableExtra [@citekable], and dplyr [@citedplyr].
+With the gathered data, we generated figures to observe the trend in work stress of different categories using R [@citeR]. We also uploaded and cleaned data using R [@citeR], tidyr [@citetidyr], dplyr [@citedplyr], tidyverse [@citetidyverse], and haven [@citehaven] packages. Figures and tables were created with knitr [@citeknit], ggplot2 [@citeggplot], kableExtra [@citekable], and dplyr [@citedplyr].
 
-In section 2 we discuss the source of the data used in this paper, the strengths and weaknesses the source and methodology contains, and potential blind spots that the data misses. Section 3 discusses the results that is being produced from the figure and what it tells us by its visualization. Section 4, we would provide a brief discussion about what we get from all figures, and make some thoughts. In section 5 there is an optional survey used to gather more information about stress caused by job status, work hours, industry sector, satisfaction rate of your job into the correlation of work stress levels.
+In Section 2 we discuss the source of the data used in this paper, the strengths and weaknesses the source and methodology contains, and potential blind spots that the data misses. Section 3 discusses the results that is being produced from the figure and what it tells us by its visualization. Section 4, we would provide a brief discussion about what we get from all figures, and make some thoughts. In section 5 there is an optional survey used to gather more information about stress caused by job status, work hours, industry sector, satisfaction rate of your job into the correlation of work stress levels.
 
 
 # Data {#sec-data}
@@ -47,8 +51,6 @@ The dataset for this paper were obtained from the US General Social Survey [@nor
 The data used in this paper were cleaned to get an accurate representation and remove any unnecessary information in this paper. Data were cleaned to remove data of some of results that does not have responds on specific items that we are looking into. Some of participants refused to answer or skipped some of the questions for various reasons. We filtered out data that would not have meaningful result on the graphs.
 
 For each figures, we selected certain items that are closely related to work condition and explored how they affects the work stress. The Data set is divided into categories and range, like working 20 or less, 20-29, 30-39, 40-49, 50-59, 60 over hours of working per week, or partime/fulltime worker. Eachfigures explores different categorization to see how they effect personal stress of work.
-
-\newpage
 
 ## Data Visualization and Analysis
 
@@ -189,16 +191,71 @@ For the people who either very satisfies or very dissatisfies on their job has c
 
 ## Work Stress Levels
 
-Even though work stress have different causes. We believe that the major cause or initial step into work stress would traffic delays. There are always traffic delays that most commuters would face almost every day. Most of these commuters are people going for work especially during rush hour time. Satisfaction rate is very important for jobs, and most people are sometimes not satisfy, its mainly due to these traffic delays. For example, if you are taking Greater Toronto Area commuters, most jobs are found in downtown Toronto, North York, and Mississauga. The GTA is going far west as Hamilton to east as Durham Region. Most of these commuters will be spending at least 1 hour of commuting to their workplace either by car or public transit. In an anonymized therapy session in 2014, a client expressed: “by the the time I get home from work, I’m just, you know, after that drive, I’m just so dead, it’s like, you know, shaking and don’t want to drive anymore. I don’t want to do anything else. . . sometimes I like if there’s been lots of traffic or like if I’ve been tired and like been forcing myself to stay awake so I can get home.” Traffic is the main issue that we believe that is is impacting the job satisfaction rate, which is why lots of people are facing work stress. We need to find a solution that can reduce the traffic, increase job satisfaction, and if possible these can expect to reduce the work stress for everyone.
+Even though work stress have different causes. We believe that the major cause or initial step into work stress would traffic delays. There are always traffic delays that most commuters would face almost every day. Most of these commuters are people going for work especially during rush hour time. Satisfaction rate is very important for jobs, and most people are sometimes not satisfy, its mainly due to these traffic delays. For example, if you are taking Greater Toronto Area commuters, most jobs are found in downtown Toronto, North York, and Mississauga. The GTA is going far west as Hamilton to east as Durham Region. Most of these commuters will be spending at least 1 hour of commuting to their workplace either by car or public transit [@trafficsatisfaction]. In an anonymized therapy session in 2014, a client expressed: “by the the time I get home from work, I’m just, you know, after that drive, I’m just so dead, it’s like, you know, shaking and don’t want to drive anymore. I don’t want to do anything else. . . sometimes I like if there’s been lots of traffic or like if I’ve been tired and like been forcing myself to stay awake so I can get home.” Traffic is the main issue that we believe that is is impacting the job satisfaction rate, which is why lots of people are facing work stress. We need to find a solution that can reduce the traffic, increase job satisfaction, and if possible these can expect to reduce the work stress for everyone.
 
 ## Work Hours of a Work Shift & Weekly Schedule
 
-Right now most professionalists are working 40 hours a week, 8 hours shift each day. There is a plan of increasing work hours to 10 hours shift, and work only 4 days each week. But, based on some data, it is definitely not recommended to increase work hours because currently lots of people are always facing work stress when the number of hours are higher. So, if the work shift gets extended longer to reduce the total number of work days, this may cause more work stress because lots of people will be stress over number of tasks to complete during work. Other alternatives that can be used to reduce work stress can be reducing the total number of hours per week from 40 hours to 35 hours. This will allow people to face less work stess because it will reduce the number of hours for them working, and we believe 7 hours work shift can be enough to complete important tasks in a job.
+Right now most professionalists are working 40 hours a week, 8 hours shift each day. There is a plan of increasing work hours to 10 hours shift, and work only 4 days each week [@workstress]. But, based on some data, it is definitely not recommended to increase work hours because currently lots of people are always facing work stress when the number of hours are higher. So, if the work shift gets extended longer to reduce the total number of work days, this may cause more work stress because lots of people will be stress over number of tasks to complete during work. Other alternatives that can be used to reduce work stress can be reducing the total number of hours per week from 40 hours to 35 hours. This will allow people to face less work stess because it will reduce the number of hours for them working, and we believe 7 hours work shift can be enough to complete important tasks in a job.
 
 ## Conclusion
 
 Work stress seems to be the main problem for everyone in both physical and mental health. Through our data, there was a lots of things to imaginate about the causes of work stress which is revealed throughout the paper. The causes in correlation into work stress are by factors such as job status, work hours, industry sector, and satisfaction rates. Half of the people working either full time or part time are facing work stress, and this could be because of their assigned tasks that they have to do every day. Under work hours, the higher the hours people work for, the higher amount of people facing work stress. This could be because of people working for too long, which is affecting their health condition, and that causes them to face higher levels of work stress. Government sector tends to be slightly higher than private sector for work stress, but this could be because government sectors tends to pay a bit less compared to bigger private sectors. For job satisfaction, there are some people that are often disatisfied, which reflects their work stress and this could be because they job they are working for is not suitable for them, lack of interst, commute issues, traffic delays, work schedule, etc. So, there are lots of issues in work, which is the main issue of work stress. After looking over everything, we believe that if companies within the same job industry pays the same salary, reducing the work hours to 35 hours a week, and trying to make some jobs hybrid or remote. Then, this can reduce the number of work stress people are facing every day.
 
 \newpage
+
+# Appendix
+## Appendix A: Supplementary Survey
+There are many researchers finding way to reduce work stress for everyone, and finding the major causes that is making people to face work stress.
+
+If you complete this survey, then that means you are giving us permission by collecting your basic information and understand that we will use your responses in our study. The survey is anonymous and will stay confidential by not sharing it with anyone else. We will not collect or share any personal identifiable information. The survey is also voluntary, and you may withdraw at any time. 
+
+If you have any questions or concerns, feel free to contact Sagith Kalaichelvam (sagith [dot] kalaichelvam [at] mail [dot] utoronto [dot] ca). 
+
+1.  What is your age?
+    a. 18-24
+    b. 25-34
+    c. 35-44
+    d. 45-64
+    e. 65+
+2.  What is your gender?
+    a. Male
+    b. Female
+    c. Others
+    d. Prefer not to say
+3.  Which causes do you think is the main cause of you facing work stress?
+    a. Traffic delays
+    b. Too much work tasks
+    c. Long hours
+    d. Not interested in the job
+    e. Others
+4.  How many hours do you prefer to work for the week?
+    a. 25 and under hours
+    b. 26-30 hours
+    c. 31-35 hours
+    d. 36-40 hours
+5.  How many hours would you work in a entire shift for the day?
+    a. 4-6 hours
+    b. 7-8 hours
+    c. 9-10 hours
+    d. 11-12 hours
+6.  How often do you get stress at work?
+    a. Always
+    b. Most of the times
+    c. Sometimes
+    d. Few times
+    e. Never
+7.  How long does it take for you to commute to work?
+    a. 15-20 mins
+    b. 30 mins
+    c. 1 hour 
+    d. More than 1 hour
+8.  Does your boss or manager make you to work on a lots of tasks on a single work shift?
+    a. Yes
+    b. Sometimes
+    c. Never
+    d. Not Applicable
+
+Thank you for participating in this survey! We hope that your responses will be very helpful in our research study to make some analysis. 
+
 
 # References
