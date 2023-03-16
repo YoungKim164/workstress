@@ -117,7 +117,7 @@ clean_data %>%
   theme(legend.position="none")
 ```
 
-@fig-2 shows more detailed categorization based on the working hours. Generally, 35 hours per week is the standard to separate part-time workers and full-time workers. However, labeling a person who works 8 hours per week and 30 hours per week as same as part-time worker does not provides insightful results. Therefore we further categorized into more detailed range. It shows the work stress of workers based on the 6 categories of working hours.
+@fig-2 shows more detailed categorization based on the working hours. Work hour and work stress are selected to visualized this data. Generally, 35 hours per week is the standard to separate part-time workers and full-time workers. However, labeling a person who works 8 hours per week and 30 hours per week as same as part-time worker does not provides insightful results. Therefore we further categorized into more detailed range. It shows the work stress of workers based on the 6 categories of working hours. Answers that are no aplicable to this sections is cleaned to represent best result.
 
 It is clearly visible that work stress has linear relationship with the working hours. As more hours workers work every week, they have more chance to experience stress. Working hours have close relationship with the burn out issues of the worker. More work hours leads them to less time to spend for self development and interest which is a great source of the stress.
 
@@ -147,6 +147,10 @@ clean_data %>%
   theme(legend.position="none")
 ```
 
+@fig-3 shows the work stress received for a people who works in the government sector and private sector. working government sector and work stress are selected for this visualization. Some of industries are hard to categorize into either government or non-government, therefor any answers that are not clear or unanswered were eliminated to have clear vision on this category. The data is grouped based on the responds on working sector.
+
+This graph show that people who works in a government sector is more likely to get stress then the people who works in a private sector. The key difference between the government sector and the private sector is the salary. Government jobs tend to have lower salary then the same level jobs in the private sector. However, the difference evens out with benefits like a pension and stable work condition. This results work stress is more affected by current status of the work and pay, rather then the future benefit or the work safety.
+
 \newpage
 
 ```{r}
@@ -173,13 +177,9 @@ clean_data %>%
   theme(legend.position="none")
 ```
 
-\newpage
+@fig-4 shows the relationship between job satisfaction and the work stress. These two items are selected and grouped by answers. The survey on the job satisfaction is done with 4 steps from very satisfied to very dissatisfied, and the work stress is done with 5 steps from Never to Always. To visualize different work stress by job satisfaction, four graphs are drawn based on the levels of satisfaction on the job.
 
-# Results {#sec-results}
-
-@fig-1 shows that over time, the number of births in the United States is dropping steadily, while it slightly went up on peak around 1990, 2001, and 2007. Most likely, the hikes going up during these years might have been into other factors that made more people among the selected population have kids. After 2007, the number of births drastically dropped a lot. Nowadays, among 1,000 women from age 15 to 44, only about 56 births will occur. While in the past, around the 1980s and 1990s, the number of births was around the 65 to 70 range. The line in the graph shows that in the near future, there will be a much lower amount of people having kids, and this can be due to other factors from their lifestyle, which is making them decide not to have more kids.
-
-While the figure shows the birth rate trend is going down, there are certain spikes in the peak of birth rates around 1990, 2001, and 2007. There were some incidents that must have happened in the United States in those years, which may have caused people to stay home more often. As we know that people that are likely to be unemployed tend to have more kids as they will have more freedom during their time spent at home. This allows the birth rates to be higher than usual. During these years, Americans faced lower employment opportunities within society [@citecatholic]. They do not have access to useful resources that improve their lifestyle in these years, so they are at home most of the time, which encourages couples to have an interest in having more kids, which ends up increasing the birth rates for these years.
+For the people who either very satisfies or very dissatisfies on their job has clear differences on work stress. As expected, people who are very satisfied on their job gets significantly less stress then the people who are very dissatisfied. This trend continues on the little satisfied and moderately satisfied, but there is a finding worth to look at. Although people who are a little dissatisfied with their jobs have little higher chance to get more stress, but there is a little to no difference in a chance to get no stress. This finding shows that job satisfaction has clear relationship with work stress but if its satisfaction is not extreme in either way  people who have resistance to the work stress have little effect from it. 
 
 \newpage
 
