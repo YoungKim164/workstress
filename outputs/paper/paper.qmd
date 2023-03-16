@@ -40,19 +40,17 @@ In section 2 we discuss the source of the data used in this paper, the strengths
 
 ## Data Source and Collection
 
-The datasets for this paper were obtained from the paper "The Puzzle of Falling US Birth Rates since the Great Recession" [@citepaper], a paper from the Journal of Economic Perspectives [@citewebsite]. The data used by the paper was compiled from various sources such as the NCHS Natality Database [@citenchs], CDC SEER [@citecdcseer], the Current Population Survey Annual Social and Economic Supplement (CPS ASEC) [@citeipums], the New York Federal Reserve [@citefed], and the Integrated Public Use Microdata Series (IPUMS) [@citeipums]. The paper and datasets were published in the year 2022. These various sources provide a lot of useful information, shown throughout all of the figures we created in this paper. For example, the sources collected lots of raw data such as the population of people giving birth, race, lifestyle factors, age of parent when giving birth, etc. So, all of this information was collected from these various sources and written into the paper "The Puzzle of Falling US Birth Rates since the Great Recession" [@citepaper]. Which was then analyzed in our paper with our version of the analysis.
+The dataset for this paper were obtained from the US General Social Survey [] from NORC at the University of Chicago. The dataset was published in the year 2021. The raw dataset includes data from 568 Survey Questions for 4032 Survey Participants. GSS monitors pubic opinion and behavior in the United States of America. This survey has been conducted since 1972 by the NORC at the University of Chicago and funded by the National Science Foundation(NSF). We have selected 10 items from the raw dataset, and only extracted selected variables. These selected variables were imported in R using the package haven[@citehaven] and readxl[@citereadxl]. Using the R[@citeR] package tidyverse[@citetidyverse] and dplyr[@citedplyr], we cleaned and performed exploratory data analysis on the selected dataset to get insights into the data. The insights gained from this data set is shown throughout all of the figures we created in this paper. The some of the selected items are year, travel time to work, labor force status, number of hours worked, and etc. The analysis of these collected information is available on section 2.3 Data Visualization and Analysis.
 
-## Data Cleaning
+## Data Cleaning and Modification
 
-Most of the data used in this paper were cleaned to get the most accurate information and remove any unnecessary information to be outputted in this paper. Data were cleaned to remove data of some years, age groups, race categories, etc. So that the revised figures can provide the most accurate information according to our analysis and not have any information that is unrelevant to our analysis. From our dataset, we dropped any values that are not related to the specific category, for example, values like NA. We have tried to filter our data much as we can for all of the graphs to make sure that it can make sense.
+The data used in this paper were cleaned to get an accurate representation and remove any unnecessary information in this paper. Data were cleaned to remove data of some of results that does not have responds on specific items that we are looking into. Some of participants refused to answer or skipped some of the questions for various reasons. We filtered out data that would not have meaningful result on the graphs.
 
-## Data Modification
-
-We have included mainly all datasets and variables that are very important for our research question. We included variables by race, birth rates, age group, and other important factors. Lots of other variables were included, such as the total number of births and birth rates. Both of these allow us to analyze the decline of births over time. We did lots of modifications of the variables for this paper, which were mainly done within the age category. Generally, the original paper has an age category as one thing from age 15-44. For our figures, we made several figures and chose a specific age range. We have tried our best to divide the range into categories like 15-19, 20-24, 25-34, and 35-44 throughout most of the figures. We have also modified for race by having a figure that shows the data by different races, such as Black, White, and Hispanic people. Several figures had an important modifications to be relevant to our analysis throughout the paper.
+For each figures, we selected certain items that are closely related to work condition and explored how they affects the work stress. The Data set is divided into categories and range, like working 20 or less, 20-29, 30-39, 40-49, 50-59, 60 over hours of working per week, or partime/fulltime worker. Eachfigures explores different categorization to see how they effect personal stress of work.
 
 \newpage
 
-## Data Visualization
+## Data Visualization and Analysis
 
 ```{r setup}
 #| echo: false
@@ -79,6 +77,8 @@ clean_data %>%
   theme_minimal(base_size = 8) +
   theme(legend.position="none")
 ```
+
+@fig-1 shows the work stress by work status.
 
 \newpage
 
@@ -174,29 +174,6 @@ clean_data %>%
 @fig-1 shows that over time, the number of births in the United States is dropping steadily, while it slightly went up on peak around 1990, 2001, and 2007. Most likely, the hikes going up during these years might have been into other factors that made more people among the selected population have kids. After 2007, the number of births drastically dropped a lot. Nowadays, among 1,000 women from age 15 to 44, only about 56 births will occur. While in the past, around the 1980s and 1990s, the number of births was around the 65 to 70 range. The line in the graph shows that in the near future, there will be a much lower amount of people having kids, and this can be due to other factors from their lifestyle, which is making them decide not to have more kids.
 
 While the figure shows the birth rate trend is going down, there are certain spikes in the peak of birth rates around 1990, 2001, and 2007. There were some incidents that must have happened in the United States in those years, which may have caused people to stay home more often. As we know that people that are likely to be unemployed tend to have more kids as they will have more freedom during their time spent at home. This allows the birth rates to be higher than usual. During these years, Americans faced lower employment opportunities within society [@citecatholic]. They do not have access to useful resources that improve their lifestyle in these years, so they are at home most of the time, which encourages couples to have an interest in having more kids, which ends up increasing the birth rates for these years.
-
-\newpage
-
-@fig-2 shows the trend in birth rates over the period 2000-2019 in different races for two different age groups. In all race group, the birth rates starts to drop significantly after the Great Recession. In a age group of 15-19, all three race groups had similar drops on the birth rate. On the other hand in age group 20-24 the white race group showed significanat birth rate drop from 86 to 49 birth per 1000 population., where as other race groups had much less birthrate drop.
-
-@fig-4 shows an interesting relationship between changes in birthrate and other economic factors over five years period. Each marker represents a state labelled with its two-letter abbreviation.
-
-Annual expenditures on childcare for families with children under 12 who report positive childcare spending rose \$2,170 nationwide for the average of 2015--2019, based on data from the Current Population Survey (all dollar values throughout are measured in constant 2019 dollars). But in the cross-state correlations, places where childcare expenditures increased more, did not experience a noticeable drop in birth rates. In fact, the trend shows that more increases in childcare expenditure have no significant impact on birthrate changes.
-
-Over this period, average monthly rents for a two- to three-bedroom apartment rose \$124 per month (from \$930 to \$1,060 in 2018 dollars, a 14 percent increase) nationwide. The increase was much larger in some states, like Colorado, Washington, and the District of Columbia. The data, however, do not indicate a negative association between rent changes and birth rate changes.
-
-We used the female-to-male median earnings ratio among full-time, year-round workers to examine women's economic opportunities. On average, the median earning ratio rose to 0.04 in the period. 12 states where the wage ratio rose the most over this sample period did not show a greater birth rate decline.
-
-If young adults are saddled with debt, they might not have sufficient disposable income to have a child or more children. We consider the total student debt per capita level in a state, which has increased from \$2,500 to \$5,400 (in 2018 dollars) on average. The relationship between state-level student debt and the birth rate is generally flat. It indicates that increases in student debt are related to aggregate reductions in birth rates.
-
-@fig-5 shows lots of important information about when people tend to have kids at certain age over the timeframe from 1990 to 2020. Based on the graph, the data shows that more people have kids after the age of 30 during this present time. In the past, most people tend to have kids before the age of 30. Around 2000 to 2005, the lifestyle started to change, where people tended to either get married or have kids later, which is why the trend of birth rates in age 30 and up has been going higher since the 2000s. While births before the age of 30 tend to slow down and decrease over time from the 2000s. According to the graph, maybe in another 100 years, we can expect that most birth rates can happen around 40-44.
-
-There are drastic changes shown in @fig-5, such as age 30-44 tends to increase around the 2000s, while the ages below 30 decreases for the number of birth rates. Around the decade of the 2000s or the beginning of this new 21st century, there was lots of modernization from people's lifestyle to other things on Earth, which is coming from several factors such as education and employment due to new innovations and inventions [@citedimock]. There are lots of new behaviour being introduced to a new generation of people. So, as they get new behaviour of attitudes, that is being involved in their decisions of marriages, and when to have kids. This is why lots of people are now getting married late and/or having kids much later when compared to the past.
-
-@fig-6 shows lots of useful information about the cumulative birth rate by mother's age in several birth cohorts from early 1968 to late 1997. We tend to use these years since, in recent times, we believe that there is enough data for these years since most of the births and living people are among these cohorts. According to @fig-6, the earlier the cohort is, the cumulative birth rate will be really high. While the later the cohort is, the cumulative birth rate will be much lower. The highest cumulative birth rate is coming from the birth cohort of 1968-1972 and 1973-1977. While the lowest comes from the 1993-1997 birth cohort.
-\newpage
-
-@tbl-1 shows the most contributor to the decline in birth rates across all age groups. The top contributor is Hispanic with less than high school education women between age 20-24 at -88.3, Hispanic with high school education women between age 15-19 at -57.5, and Black (Non-Hispanic) women between age 15-19 at -39.8, respectively.
 
 \newpage
 

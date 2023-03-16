@@ -1,6 +1,6 @@
 library(dplyr)
 library(tidyverse) 
-
+library(readxl)
 
 raw_data <- read_excel("inputs/data/GSS.xlsx")
 clean_data <- raw_data %>% 
