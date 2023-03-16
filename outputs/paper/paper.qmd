@@ -3,7 +3,7 @@ title: "Work Stress"
 author: 
   - Sagith Kalaichelvam
   - Youngho Kim
-thanks: "Code, data are available at: https://github.com/YoungKim164/workstress and https://doi.org/10.1257/jep.36.1.151 and replication package at: https://doi.org/10.48152/ssrp-cdf6-2r92"
+thanks: "Code, and data are available at: https://github.com/YoungKim164/workstress"
 date: "`r Sys.time()`"
 date-format: "D MMMM YYYY"
 format: 
@@ -14,7 +14,7 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
-    lot: true
+    lot: false
     lof: true
 bibliography: references.bib
 ---
@@ -40,7 +40,7 @@ In section 2 we discuss the source of the data used in this paper, the strengths
 
 ## Data Source and Collection
 
-The dataset for this paper were obtained from the US General Social Survey [] from NORC at the University of Chicago. The dataset was published in the year 2021. The raw dataset includes data from 568 Survey Questions for 4032 Survey Participants. GSS monitors pubic opinion and behavior in the United States of America. This survey has been conducted since 1972 by the NORC at the University of Chicago and funded by the National Science Foundation(NSF). We have selected 10 items from the raw dataset, and only extracted selected variables. These selected variables were imported in R using the package haven[@citehaven] and readxl[@citereadxl]. Using the R[@citeR] package tidyverse[@citetidyverse] and dplyr[@citedplyr], we cleaned and performed exploratory data analysis on the selected dataset to get insights into the data. The insights gained from this data set is shown throughout all of the figures we created in this paper. The some of the selected items are year, travel time to work, labor force status, number of hours worked, and etc. The analysis of these collected information is available on section 2.3 Data Visualization and Analysis.
+The dataset for this paper were obtained from the US General Social Survey [@norc] from NORC at the University of Chicago. The dataset was published in the year 2021. The raw dataset includes data from 568 Survey Questions for 4032 Survey Participants. GSS monitors pubic opinion and behavior in the United States of America. This survey has been conducted since 1972 by the NORC at the University of Chicago and funded by the National Science Foundation(NSF). We have selected 10 items from the raw dataset, and only extracted selected variables. These selected variables were imported in R using the package haven[@citehaven] and readxl[@citereadxl]. Using the R[@citeR] package tidyverse[@citetidyverse] and dplyr[@citedplyr], we cleaned and performed exploratory data analysis on the selected dataset to get insights into the data. The insights gained from this data set is shown throughout all of the figures we created in this paper. The some of the selected items are year, travel time to work, labor force status, number of hours worked, and etc. The analysis of these collected information is available on section 2.3 Data Visualization and Analysis.
 
 ## Data Cleaning and Modification
 
