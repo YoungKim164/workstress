@@ -78,7 +78,9 @@ clean_data %>%
   theme(legend.position="none")
 ```
 
-@fig-1 shows the work stress by work status.
+@fig-1 shows the work stress by work status. To visualize this figure, work stress and work status data was selected and grouped by the response. With the cumulative results by responds, two separate bar graph was created to show the work stress people experienced based on their working status.
+
+@fig-1 shows that the full-time workers have tendency to experience more work stress then the part-time workers. The full-time workers often have more work experience therefore have more responsibility then the part-time workers. This would expose them to more stressful situation often compared to the part-time workers. Also, part-time workers have other aspects of life and often focuses more on those, for examples school or house work. It makes them to care less about the work and receives less stress from it. Last but not least, part-time workers have much more flexible work schedule then the full-time workers. This prevents them from burn out from the work and potentially reduces stress.  
 
 \newpage
 
@@ -114,6 +116,10 @@ clean_data %>%
   theme_minimal(base_size = 6) +
   theme(legend.position="none")
 ```
+
+@fig-2 shows more detailed categorization based on the working hours. Generally, 35 hours per week is the standard to separate part-time workers and full-time workers. However, labeling a person who works 8 hours per week and 30 hours per week as same as part-time worker does not provides insightful results. Therefore we further categorized into more detailed range. It shows the work stress of workers based on the 6 categories of working hours.
+
+It is clearly visible that work stress has linear relationship with the working hours. As more hours workers work every week, they have more chance to experience stress. Working hours have close relationship with the burn out issues of the worker. More work hours leads them to less time to spend for self development and interest which is a great source of the stress.
 
 \newpage
 
