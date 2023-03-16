@@ -1,7 +1,15 @@
+#### Preamble ####
+# Purpose: Read in data from the GSS
+# Prerequisites: Need to know where to get GSS data
+# Author: Sagith Kalaichelvam and Youngho Kim
+# Email: sagith.kalaichelvam@mail.utoronto.ca
+# Date: 16 March 2023
+# GitHub: https://github.com/YoungKim164/workstress
 library(dplyr)
 library(tidyverse) 
 library(readxl)
 
+# Reading the file
 raw_data <- read_excel("inputs/data/GSS.xlsx")
 clean_data <- raw_data %>% 
   select(wrkgovt, stress) %>% 
