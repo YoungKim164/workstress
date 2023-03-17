@@ -1,9 +1,19 @@
 # workstress
 
-This repo is organized as follows.
+## Summary
 
-The "inputs" folder includes the raw dataset which was used to create our supported figures in this paper. 
+This repo contains the code and data for Work Stress.
 
-The "scripts" folder includes an R-script file such as the simulation which will broken down into 4 different file that cleans and organizes the raw data found in the data folder, there will also be the testing script.
+No download is required to reproduce the PDF; data is automatically downloaded when rendered.
 
-The "output" folder contains the Quarto file in R for the paper, and also contains a PDF file to view all the nesscessary information within the paper. Some of the cleaned data can find throughout the Quarto file in R. A link to the survey can be found in the footnotes of the appendix section in the paper.
+### Code
+
+All code was written within R. All R type of files can be access through this repository. The paper is written through Quarto type of paper in R. Any other files such as downloading data, simulation, data cleaning, and testing was written in R Script.
+
+### Data
+
+-   [/inputs/data](https://github.com/YoungKim164/workstress/tree/master/inputs/data)/ contains different types of extensions
+
+-   [/outputs/paper/](https://github.com/YoungKim164/workstress/tree/master/outputs/paper) contains 'bib' extension file (bibliography), pdf (Report paper), qmd (Main Quarto). A link to the survey can be found in the footnotes of the appendix section in the paper.
+
+-   [/scripts/](https://github.com/YoungKim164/workstress/tree/master/outputs/paper) contains 'R' extension files (00-Simulation), (01-test_data)
