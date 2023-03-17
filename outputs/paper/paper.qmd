@@ -72,7 +72,7 @@ positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
 clean_data %>% 
   ggplot(aes(group = wrkstat)) +
   geom_bar(aes(x=stress, y = ..prop.., fill=factor(..x..)))+
-  labs(y = "Percent", fill="Work Stress", x = 'Work Stress', title = "Work Stress by status" ) +
+  labs(y = "Percentage", fill="Work Stress", x = 'Work Stress', title = "Work Stress by Status" ) +
   facet_wrap(~wrkstat) +
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
@@ -114,6 +114,7 @@ positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
 clean_data %>% 
   ggplot() +
   geom_bar(aes(x = stress,  y = ..prop.., group = range, fill=factor(..x..))) +
+  labs(y = "Percentage", fill="Work Stress", x = 'Work Stress', title = "Work Stress by Work Hours" ) +
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
   facet_wrap(~range) +
@@ -144,6 +145,7 @@ positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
 clean_data %>% 
   ggplot() +
   geom_bar(aes(x = stress,  y = ..prop.., group = wrkgovt, fill=factor(..x..))) +
+  labs(y = "Percentage", fill=" Work Stress", x = 'Work Stress', title = "Work Stress by Industry Sector" ) +
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
   facet_wrap(~wrkgovt) +
@@ -174,6 +176,7 @@ positions <- c("Never", "Hardly ever", "Sometimes", "Often", "Always")
 clean_data %>% 
   ggplot() +
   geom_bar(aes(x = stress,  y = ..prop.., group = satjob, fill=factor(..x..))) +
+  labs(y = "Percentage", fill="Work Stress", x = 'Work Stress', title = "Work Stress by Job Satisfaction" ) +
   scale_x_discrete(limits = positions) +
   scale_y_continuous(labels = scales::percent) +
   facet_wrap(~satjob) +
