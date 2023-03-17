@@ -16,4 +16,4 @@ All code was written within R. All R type of files can be access through this re
 
 -   [/outputs/paper/](https://github.com/YoungKim164/workstress/tree/master/outputs/paper) contains 'bib' extension file (bibliography), pdf (Report paper), qmd (Main Quarto). A link to the survey can be found in the footnotes of the appendix section in the paper.
 
--   [/scripts/](https://github.com/YoungKim164/workstress/tree/master/outputs/paper) contains 'R' extension files (00-Simulation), (01-test_data)
+-   [/scripts/](https://github.com/YoungKim164/workstress/tree/master/scripts) contains 'R' extension files (00-Simulation), (01-test_data)
