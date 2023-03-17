@@ -209,11 +209,18 @@ Work stress seems to be the main problem for everyone in both physical and menta
 
 # Appendix
 ## Appendix A: Supplementary Survey
+
+Supplementary Survey is on Google Forms: https://forms.gle/fdPuTeWRb7M68Z8ZA
+
+### Survey Introduction 
+
 There are many researchers finding way to reduce work stress for everyone, and finding the major causes that is making people to face work stress.
 
 If you complete this survey, then that means you are giving us permission by collecting your basic information and understand that we will use your responses in our study. The survey is anonymous and will stay confidential by not sharing it with anyone else. We will not collect or share any personal identifiable information. The survey is also voluntary, and you may withdraw at any time. 
 
 If you have any questions or concerns, feel free to contact Sagith Kalaichelvam (sagith [dot] kalaichelvam [at] mail [dot] utoronto [dot] ca). 
+
+### Survey Questions
 
 1.  What is your age?
     a. 18-24
@@ -224,19 +231,20 @@ If you have any questions or concerns, feel free to contact Sagith Kalaichelvam 
 2.  What is your gender?
     a. Male
     b. Female
-    c. Others
-    d. Prefer not to say
+    c. Prefer not to say
+    d. Other...
 3.  Which causes do you think is the main cause of you facing work stress?
     a. Traffic delays
     b. Too much work tasks
     c. Long hours
     d. Not interested in the job
-    e. Others
+    e. Other...
 4.  How many hours do you prefer to work for the week?
     a. 25 and under hours
     b. 26-30 hours
     c. 31-35 hours
     d. 36-40 hours
+    e. Other...
 5.  How many hours would you work in a entire shift for the day?
     a. 4-6 hours
     b. 7-8 hours
@@ -258,6 +266,8 @@ If you have any questions or concerns, feel free to contact Sagith Kalaichelvam 
     b. Sometimes
     c. Never
     d. Not Applicable
+
+### Survey Conclusion
 
 Thank you for participating in this survey! We hope that your responses will be very helpful in our research study to make some analysis. 
 
