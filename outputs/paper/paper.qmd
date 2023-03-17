@@ -10,7 +10,7 @@ format:
   pdf:
     documentclass: article
     geometry: margin = 1in
-    abstract: "This paper discusses data from some survey, which can gather data that is linked to how people face work stress. It uses uses the original data from the survey which determines the relationships between respondent work stress levels by satisfaction, status, sectors, and work time. There will be some strong connections between the analysis and figures of the work stress. This paper will provide a strong analysis about the work stress that people are facing."
+    abstract: "This paper discusses data from US General Social Survey, which can gather data that is linked to how people face work stress. It uses uses the original data from the survey which determines the relationships between respondent work stress levels by satisfaction, status, sectors, and work time. There will be some strong connections between the analysis and figures of the work stress. This paper will provide a strong analysis about the work stress that people are facing."
     toc: true
     number-sections: true
     colorlinks: true
@@ -191,11 +191,15 @@ For the people who either very satisfies or very dissatisfies on their job has c
 
 ## Work Stress Levels
 
-Even though work stress have different causes. We believe that the major cause or initial step into work stress would traffic delays. There are always traffic delays that most commuters would face almost every day. Most of these commuters are people going for work especially during rush hour time. Satisfaction rate is very important for jobs, and most people are sometimes not satisfy, its mainly due to these traffic delays. For example, if you are taking Greater Toronto Area commuters, most jobs are found in downtown Toronto, North York, and Mississauga. The GTA is going far west as Hamilton to east as Durham Region. Most of these commuters will be spending at least 1 hour of commuting to their workplace either by car or public transit [@trafficsatisfaction]. In an anonymized therapy session in 2014, a client expressed: “by the the time I get home from work, I’m just, you know, after that drive, I’m just so dead, it’s like, you know, shaking and don’t want to drive anymore. I don’t want to do anything else. . . sometimes I like if there’s been lots of traffic or like if I’ve been tired and like been forcing myself to stay awake so I can get home.” Traffic is the main issue that we believe that is is impacting the job satisfaction rate, which is why lots of people are facing work stress. We need to find a solution that can reduce the traffic, increase job satisfaction, and if possible these can expect to reduce the work stress for everyone.
+Even though work stress have different causes. We believe that the major cause or initial step into work stress would traffic delays. There are always traffic delays that most commuters would face almost every day. Most of these commuters are people going for work especially during rush hour time. Satisfaction rate is very important for jobs, and most people are sometimes not satisfy, its mainly due to these traffic delays. For example, if you are taking Greater Toronto Area commuters, most jobs are found in downtown Toronto, North York, and Mississauga. The GTA is going far west as Hamilton to east as Durham Region. Most of these commuters will be spending at least 1 hour of commuting to their workplace either by car or public transit [@trafficsatisfaction]. In an anonymized therapy session in 2014, a client expressed: “by the time I get home from work, I’m just, you know, after that drive, I’m just so dead, it’s like, you know, shaking and don’t want to drive anymore. I don’t want to do anything else. . . sometimes I like if there’s been lots of traffic or like if I’ve been tired and like been forcing myself to stay awake so I can get home.” [@therapy] Traffic is the main issue that we believe that is is impacting the job satisfaction rate, which is why lots of people are facing work stress. We need to find a solution that can reduce the traffic, increase job satisfaction, and if possible these can expect to reduce the work stress for everyone.
 
 ## Work Hours of a Work Shift & Weekly Schedule
 
 Right now most professionalists are working 40 hours a week, 8 hours shift each day. There is a plan of increasing work hours to 10 hours shift, and work only 4 days each week [@workstress]. But, based on some data, it is definitely not recommended to increase work hours because currently lots of people are always facing work stress when the number of hours are higher. So, if the work shift gets extended longer to reduce the total number of work days, this may cause more work stress because lots of people will be stress over number of tasks to complete during work. Other alternatives that can be used to reduce work stress can be reducing the total number of hours per week from 40 hours to 35 hours. This will allow people to face less work stess because it will reduce the number of hours for them working, and we believe 7 hours work shift can be enough to complete important tasks in a job.
+
+## Weaknesses and Next Steps
+
+There are chances to have some weakness within the dataset collected. The data within the dataset are among a specific unknown group of people, where we can not exactly expect the response will be the same right now. People tend to change their decisions often, so the data in the dataset is only 100% valid at the time when it was first released. So, our entire analysis is being supported based on this dataset and more useful when it was intially released. The data is coming from 2021, but that is already 2 years from now. So, in the future, US General Social Survey needs update their datasets either annually or monthly to get the most accurate data, which can provide a stronger analysis and more reasonable to our paper.
 
 ## Conclusion
 
@@ -256,6 +260,9 @@ If you have any questions or concerns, feel free to contact Sagith Kalaichelvam 
     d. Not Applicable
 
 Thank you for participating in this survey! We hope that your responses will be very helpful in our research study to make some analysis. 
+
+
+\newpage
 
 
 # References
